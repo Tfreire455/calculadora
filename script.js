@@ -65,28 +65,27 @@ numero9.addEventListener('click', () => {
 })
 
 
-
-
-
-
 btnCalcular.addEventListener('click', () => {
-  for (adicao === 'click'; parseFloat(resultado.value); somar()) {
-    resultado.innerHTML = `
+  resultado.innerHTML = `
   ${entradaNumeros.value}
 `
-  }
 })
 
-function criarSoma() {
-  const criarNumeroSoma = [];
-  adicao.addEventListener('click', () => {
-    criarNumeroSoma.push(parseFloat(entradaNumeros.value))
-    const soma = criarNumeroSoma.reduce((prev, elem) => prev + elem, 0)
-    console.log(soma)
+function resultadoFinal() {
+
+  const criarNumero = [];
+
+  btnCalcular.addEventListener('click', () => {
     reset()
+    if (adicao.addEventListener) {
+      reset()
+      criarNumero.push(parseFloat(entradaNumeros.value))
+      const total = criarNumero.reduce((prev, elem) => prev + elem, 0)
+      console.log(total)
+      resultado.innerHTML = total
+    }
   })
 }
-
 
 btnReset.addEventListener('click', () => {
   reset()
@@ -97,4 +96,4 @@ function reset() {
   resultado.innerHTML = null;
 }
 
-criarSoma()
+resultadoFinal()
