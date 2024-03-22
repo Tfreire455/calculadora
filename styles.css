@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+    background-image: linear-gradient(45deg,
+            hsl(240deg 00% 100%) 0%,
+            hsl(240deg 100% 20%) 0%,
+            hsl(217deg 100% 32%) 19%,
+            hsl(206deg 100% 40%) 30%,
+            hsl(194deg 100% 42%) 37%,
+            hsl(176deg 100% 41%) 40%,
+            hsl(159deg 100% 54%) 41%,
+            hsl(103deg 71% 65%) 42%,
+            hsl(64deg 58% 49%) 43%,
+            hsl(41deg 74% 51%) 47%,
+            hsl(22deg 87% 59%) 57%,
+            hsl(0deg 86% 65%) 100%);
+}
+
+#cabecalho {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calc {
+    gap: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-div {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.tela-conta {
+    padding: 03% 20%;
+    border: 4px solid black;
+    border-radius: 16px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+}
+
+.btn-calcular {
+    color: white;
+}
+
+.btn-calcular:hover {
+    filter: brightness(2);
+    transition: 1s;
+}
+
+.btn-reset {
+    border:1px solid #082532;
+    border-radius: 4px;
+    padding: 7.2px 23px;
+}
+
+.btn-reset:hover {
+    transition: 1s;
+}
+
+.numeros {
+    list-style: none;
+    display: grid;
+    grid-template: "1 2 3"
+        "4 5 6"
+        "7 8 9";
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.numero {
+    padding: 20px;
+    display: flex;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 8px;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.numero-resultado {
+    padding: 10px 100px;
+    display: flex;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 8px;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+
+.numero:hover {
+    transform: scale(1.2, 1.2);
+    transition: 1s ease-in-out;
+}
+
+.operacoes {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+svg {
+    fill: rgb(193, 255, 255);
+}
+
+.operacao {
+    background:
+        conic-gradient(#193a49 25%, #0000 0) 0 0/calc(2*100px) calc(100px/9.5),
+        conic-gradient(#193a49 25%, #0000 0) 0 0/calc(100px/9.5) calc(2*100px),
+        repeating-conic-gradient(#0000 0 25%, #193a49 0 50%) 100px 0 /calc(2*100px) calc(2*100px),
+        radial-gradient(50% 50%, #082532 98%, #193a49) 0 0/100px 100px;
+
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 10px 10px 8px -3px rgba(0, 0, 0, 0.63);
+    -webkit-box-shadow: 10px 10px 8px -3px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 10px 10px 8px -3px rgba(0, 0, 0, 0.63);
+    cursor: pointer;
+}
+
+.operacao:hover {
+    transform: scale(1.2, 1.2);
+    filter: brightness(2);
+    transition: 1s;
+}
