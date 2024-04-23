@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./style.css" rel="stylesheet" />
 </head>
-
 <body>
     <div class="calculadora">
-        <input type="text" id="tela" readonly>
-        <div class="botoes">
-            <button onclick="adicionarNumero('7')">7</button>
-            <button onclick="adicionarNumero('8')">8</button>
-            <button onclick="adicionarNumero('9')">9</button>
-            <button onclick="adicionarOperacao('+')">+</button>
-            <br>
-            <button onclick="adicionarNumero('4')">4</button>
-            <button onclick="adicionarNumero('5')">5</button>
-            <button onclick="adicionarNumero('6')">6</button>
-            <button onclick="adicionarOperacao('-')">-</button>
-            <br>
-            <button onclick="adicionarNumero('1')">1</button>
-            <button onclick="adicionarNumero('2')">2</button>
-            <button onclick="adicionarNumero('3')">3</button>
-            <button onclick="adicionarOperacao('*')">*</button>
-            <br>
-            <button onclick="adicionarNumero('0')">0</button>
-            <button onclick="limparTela()">C</button>
-            <button onclick="calcularResultado()">=</button>
-            <button onclick="adicionarOperacao('/')">/</button>
+        <input type="text" readonly id="tela" />
+        <div class="numeros1-9">
+        <button type="button" class="operacoes" value="+" onclick="adicionarOperador('+')">+</button>
+        <button type="button" class="operacoes" value="-" onclick="adicionarOperador('-')">-</button>
+        <button type="button" class="operacoes" value="/" onclick="adicionarOperador('/')">/</button>
+        <button type="button" class="operacoes" value="*" onclick="adicionarOperador('*')">*</button>
+        <button type="button" class="operacoesCE" value="C" onclick="limparTela('C')">C</button>
+        <button type="button" class="operacoesCE" value="=" onclick="calcular('=')">=</button>
         </div>
     </div>
-    <script src="script.js"></script>
-</body>
+</div>
 
+<script src="./script.js"></script>
+  </body>
 </html>
